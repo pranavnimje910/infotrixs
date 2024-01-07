@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote of the Day</title>
+</head>
+<body>
+    <style>
+        body {
+            background-image: url("background.jpg");
+            background-color: rgb(20, 33, 41);
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          
+          .container {
+            background-color: rgba(225, 220, 207, 0.737);
+            margin: 70px auto;
+            max-width: 600px;
+            border-style: solid;
+            border-width: 1px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px rgba(57, 63, 65, 0.571);
+          }
+
+          .author{
+            font-size: large;
+            display: inline;
+        }
+
+        #randomquotes:hover{
+            border-radius: 5px;
+            background-color: rgb(154, 154, 154);
+            font-size: larger;
+        }
+
+        #randomquotes{
+            font-family: Arial, Helvetica, sans-serif;
+            border-width: 1px;
+            border-radius: 5px;
+            font-size: large;
+        }
+
+        #title{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+        }
+
+        button{
+            cursor: pointer;
+        }
+
+        #searchbyauthor:hover{
+            background-color: rgb(154, 154, 154);
+        }
+
+        #quote{
+          font-family: cursive;
+          font-size: larger;
+        }
+
+        #authorQuote{
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+    </style>
+  <div class="container">
+    <h1 id="title">Quote of the Day</h1>
+    <hr>
+      <p id="quote"></p>
+      <p id="authorQuote"></p>
+    <hr>
+      <button id="randomquotes" onclick="getRandomQuote()">Get Random Quote</button>
+      <table>
+        <ul>
+            <li class="author"><label>Search for quotes by author name:</label></li>
+            <li class="author"><input type="text" id="authorInput" placeholder="Enter author name"></li>
+            <li class="author"><button onclick="searchByAuthor()" id="searchByAuthor">Search</button></li>
+        </ul>
+    </table>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
